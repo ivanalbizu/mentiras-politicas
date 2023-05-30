@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 import NetlifyCMS from 'astro-netlify-cms';
+import netlify from "@astrojs/netlify/functions"
+
 import mdx from '@astrojs/mdx';
 
 import sitemap from '@astrojs/sitemap';
@@ -20,7 +22,7 @@ export default defineConfig({
 					{
 						name: 'posts',
 						label: 'Blog Posts',
-						folder: 'src/pages/blog',
+						folder: 'src/content/blog',
 						create: true,
 						delete: true,
 						fields: [
@@ -32,4 +34,6 @@ export default defineConfig({
 			}
     }),
 	],
+	output: "server",
+  adapter: netlify(),
 });
