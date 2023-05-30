@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://mentiraspoliticas.netlify.app',
 	integrations: [mdx(), sitemap(),
 		NetlifyCMS({
       config: {
@@ -29,7 +29,7 @@ export default defineConfig({
 						],
 					},
 				],
-			};
+			}
     }),
 	],
 });
